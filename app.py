@@ -72,9 +72,7 @@ if uploaded_file:
             {"role": "system", "content": "You are an AI financial analyst providing variance analysis insights on budget vs. actuals."},
             {"role": "user", "content": f"Here is the budget vs. actual variance summary:\n{df.to_string()}\nWhat are the key insights and recommendations?"}
         ],
-        model="openai/gpt-oss-20b
-
-",
+        model="openai/gpt-oss-20b",
     )
 
     st.write(response.choices[0].message.content)
@@ -89,8 +87,6 @@ if uploaded_file:
                 {"role": "system", "content": "You are an AI financial analyst helping users understand their budget vs. actual variance analysis."},
                 {"role": "user", "content": f"Variance Data:\n{df.to_string()}\n{user_query}"}
             ],
-            model="openai/gpt-oss-20b
-
-",
+            model="openai/gpt-oss-20b",
         )
         st.write(chat_response.choices[0].message.content)
